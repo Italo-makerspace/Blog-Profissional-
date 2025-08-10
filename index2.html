@@ -1,104 +1,174 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <style>
-    .botão {
-      color: rgb(255, 255, 255);
-      border-radius: 10px;
-      padding: 9px;
-      margin: 50px auto;
-      width: 100%;
-      max-width: 1000px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border: none;
-      outline: none; 
-    }
-    </style>
-    <style>
-      .botão2{
-        background-color: #ffffff;
-        color: rgb(255, 255, 255);
-        border-radius: 3px;
-        padding: 9px;
-        margin: 50px auto;
-        width: 10%;
-        max-width: 100px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border: none;
-        outline: none; 
-      }
-      </style>
-
-
-    <style>
-        body {
-          background-image: url("img/coolbackgrounds-fractalize-ruby_garden.png"); 
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          height: 100vh; 
-          margin: 0;
-        }
-      
-        .overlay {
-          background-color: #ffffff;
-          border-radius: 10px;
-          padding: 9px;
-          margin: 50px auto;
-          width: 100%;
-          max-width: 1000px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-      </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrando em contado</title>
+    <title>Contact Me</title>
+    <style>
+        /* --- General Body and Background Styles --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-image: url("https://www.transparenttextures.com/patterns/cubes.png"); /* Placeholder background */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* --- Main Content Container --- */
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px 40px;
+            margin: 40px auto;
+            width: 100%;
+            max-width: 900px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        /* --- Form and Layout --- */
+        .contact-form-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .contact-form-table td {
+            padding: 10px 0;
+        }
+
+        /* --- Headings --- */
+        h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 3.5em;
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            font-size: 1.2em;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        /* --- Form Inputs and Text Area --- */
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+            font-size: 1em;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        .form-textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* --- Buttons --- */
+        .button {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 25px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+        
+        .button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        
+        .submit-button {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .back-button {
+            background-color: #6c757d;
+        }
+
+        /* --- Footer Links --- */
+        .footer-links {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .footer-links a {
+            color: #007BFF;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
 </head>
 <body>
    <div class="overlay">
-    <button class="botão2" style="position:absolute; top: 50px; left: 50px;  "> <a href="index.html">Voltar</a></button>
-    <form>
-      <table border="0" width="900" align="center">
-        <tr>
-          <td>
-            <center>
-              <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 80px;">Formulário</h1>
-            </center>
-          </td>
-      </tr>
-        <tr>
-          <td colspan="2">
-              <h3 style="position: relative; top: 60px;">Identificação profissional:</h3>
-              <input class="botão" type="text" name="Nome da empresa" placeholder="Nome" style="color: black;">
-          </td>
-        </tr>  
-        <tr>
-          <td colspan="2">
-              <h3 style="position: relative; top: 60px;">Email de contato:</h3>
-              <input class="botão" type="text" name="Email da empresa" placeholder="Email profissional" style="color: black;" minlength="6" required>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-              <h3 style="position: relative; top: 60px;">Descrição:</h3>
-              <input class="botão" type="text" name="Descrição" placeholder="O que considera o maior desafio que sua empresa enfrenta atualmente?" style="color: black; height: 150px;" minlength="6" required>
-              <button class="botão" style="color: black;">Enviar</button>
-              <center>
-              <a href="https://github.com/Italo-makerspace">GitHub</a>
-              </center>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <center>
-            <a href="#">italooliveiralisboa@gmail.com</a>
-            </center>
-          </td>
-        </tr>
-      </table>
-      </form>
-     
-    </div>
+    <form action="#" method="post">
+        <table class="contact-form-table">
+            <!-- Back Button Row -->
+            <tr>
+                <td>
+                    <a href="index.html" class="button back-button">Back</a>
+                </td>
+            </tr>
+            <!-- Header Row -->
+            <tr>
+                <td>
+                    <h1>Contact Form</h1>
+                </td>
+            </tr>
+            <!-- Name Input Row -->
+            <tr>
+                <td>
+                    <h3>Your Name / Company:</h3>
+                    <input class="form-input" type="text" name="company_name" placeholder="e.g., Jane Doe or Acme Inc." required>
+                </td>
+            </tr>  
+            <!-- Email Input Row -->
+            <tr>
+                <td>
+                    <h3>Contact Email:</h3>
+                    <input class="form-input" type="email" name="contact_email" placeholder="you@example.com" required>
+                </td>
+            </tr>
+            <!-- Message Textarea Row -->
+            <tr>
+                <td>
+                    <h3>Message:</h3>
+                    <textarea class="form-textarea" name="description" placeholder="How can I help you today?" required></textarea>
+                    <button type="submit" class="button submit-button">Submit</button>
+                </td>
+            </tr>
+            <!-- Footer Links Row -->
+            <tr>
+                <td>
+                    <div class="footer-links">
+                        <a href="https://github.com/Italo-makerspace" target="_blank">GitHub</a>
+                        <a href="mailto:italooliveiralisboa@gmail.com">italooliveiralisboa@gmail.com</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+   </div>
 </body>
-
 </html>
