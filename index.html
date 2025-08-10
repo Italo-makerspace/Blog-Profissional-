@@ -1,123 +1,186 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biografia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biography</title>
+    <style>
+        /* --- General Styles --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png"); /* Placeholder background */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            color: #333;
+        }
 
-  <style>
-    body {
-      background-image: url("img/coolbackgrounds-fractalize-clear_lagoon.png");
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      margin: 0;
-      position: relative;
-      overflow-x: hidden;
-    }
+        /* --- Main Content Container --- */
+        .bio-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px 40px;
+            margin: 40px auto;
+            max-width: 900px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
 
-    .overlay {
-      background-color: #ffffff;
-      border-radius: 10px;
-      padding: 9px;
-      margin: 50px auto;
-      width: 100%;
-      max-width: 1000px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+        /* --- Header Section --- */
+        .bio-header h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 3.5em;
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-    .botão {
-      color: rgb(255, 255, 255);
-      border-radius: 10px;
-      padding: 9px;
-      margin: 50px auto;
-      width: 100%;
-      max-width: 1000px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border: none;
-      outline: none;
-      background-color: #007BFF;
-      cursor: pointer;
-    }
+        /* --- Content Section --- */
+        .bio-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
 
-    img {
-      float: left;
-      margin-right: 40px;
-      transition: transform 0.2s ease;
-      position: relative;
-    }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            float: left; /* Fallback for older browsers */
+            transition: transform 0.3s ease-out;
+            position: relative;
+        }
 
-    #gravidadeBtn {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background-color: #007BFF;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      z-index: 1000;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-  </style>
+        .text-content p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            text-align: justify;
+            margin-top: 0;
+        }
+
+        /* --- Buttons --- */
+        .action-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 30px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .action-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        #gravityBtn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 768px) {
+            .bio-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .profile-image {
+                float: none;
+                margin-right: 0;
+            }
+            .text-content p {
+                text-align: left;
+            }
+            .bio-header h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <div class="overlay">
-    <table border="0" width="900" align="center">
-      <tr>
-        <td>
-          <center>
-            <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 80px;">Biografia</h1>
-          </center>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <img id="imagemBiografia" src="./img/Black White Modern Handwritten Square Studio Logo.png" alt="Guilherme Oliveira Araujo" width="150">
-          <p style="font-size: large;">Guilherme Oliveira Araujo é um jovem aspirante à área de programação, atualmente cursando Desenvolvimento de Sistemas pelo SENAI. Nascido em 16 de março de 2009, sua trajetória começou de maneira desafiadora, sendo um bebê prematuro de 28 a 29 semanas e enfrentando, até os cinco anos, problemas cardiovasculares e episódios recorrentes de paralisia facial total ou parcial.</p>
-          <p style="font-size: large;">Apesar das adversidades iniciais, Guilherme ingressou com cinco anos na escola SESI Antônio Scalon por meio de uma bolsa de estudos, o que marcou o início de uma jornada acadêmica inspiradora. Ainda nessa fase, começou a estudar inglês e se envolveu com diversas atividades extracurriculares, como artes marciais (jiu-jitsu e, mais tarde, muay-thai), além de aulas de violão e violino.</p>
-          <p style="font-size: large;">No 7º ano, Guilherme descobriu seu interesse pelas Olimpíadas do Conhecimento. Logo em sua primeira participação, conquistou medalha de ouro na OBA (Olimpíada Brasileira de Astronomia). No ano seguinte, repetiu o feito ao vencer a ONEE (Olimpíada Nacional de Eficiência Energética), também com medalha de ouro. No 9º ano, foi novamente premiado com medalha na OBMEP (Olimpíada Brasileira de Matemática das Escolas Públicas).</p>
-          <p style="font-size: large;">Demonstrando curiosidade e disciplina, decidiu aprender uma nova língua por ano: japonês, francês e alemão, respectivamente, até o 2º ano do ensino médio. Atualmente, cursa Desenvolvimento de Sistemas no SENAI, onde participa ativamente da WorldSkills, competição internacional que destaca jovens talentos técnicos e profissionais.</p>
-          <p style="font-size: large;">Guilherme busca constantemente aprimorar suas habilidades na área de tecnologia e almeja uma carreira sólida como programador, com foco em inovação e impacto social. Determinado, curioso e persistente, acredita que cada desafio é uma oportunidade de superação e crescimento.</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button class="botão">
-            <a href="index2.html" target="_blank" style="text-decoration: none; color: white;">Onde Encontrar</a>
-          </button>
-        </td>
-      </tr>
-    </table>
-  </div>
+    <main class="bio-container">
+        <header class="bio-header">
+            <h1>Biography</h1>
+        </header>
 
-  <button id="gravidadeBtn">...</button>
+        <section class="bio-content">
+            <img id="bioImage" class="profile-image" src="https://placehold.co/150x150/333333/FFFFFF?text=Bio" alt="Guilherme Oliveira Araujo">
+            
+            <div class="text-content">
+                <p>Guilherme Oliveira Araujo is a young, aspiring programmer currently studying Systems Development at SENAI. Born on March 16, 2009, his journey began with significant challenges as a premature baby born at 28-29 weeks, facing cardiovascular issues and recurrent episodes of facial paralysis until the age of five.</p>
+                <p>Despite these initial adversities, Guilherme enrolled at the SESI Antônio Scalon school at age five with a scholarship, marking the start of an inspiring academic journey. During this period, he began studying English and engaged in various extracurricular activities, including martial arts (Jiu-Jitsu and later Muay Thai), as well as guitar and violin lessons.</p>
+                <p>In the 7th grade, Guilherme discovered his interest in Academic Olympiads. In his very first competition, he won a gold medal at the OBA (Brazilian Astronomy Olympiad). The following year, he repeated this achievement by winning the ONEE (National Olympiad for Energy Efficiency), also securing a gold medal. In the 9th grade, he was again awarded a medal at the OBMEP (Brazilian Mathematical Olympiad of Public Schools).</p>
+                <p>Demonstrating immense curiosity and discipline, he decided to learn a new language each year—Japanese, French, and German, respectively—until his sophomore year of high school. He is currently studying Systems Development at SENAI, where he actively participates in WorldSkills, an international competition that highlights talented young technical and professional individuals.</p>
+                <p>Guilherme constantly seeks to enhance his skills in technology and aims for a solid career as a programmer with a focus on innovation and social impact. Determined, curious, and persistent, he believes that every challenge is an opportunity for growth and overcoming obstacles.</p>
+            </div>
+        </section>
 
-  <script>
-    const img = document.getElementById('imagemBiografia');
-    const gravidadeBtn = document.getElementById('gravidadeBtn');
+        <a href="index2.html" class="action-button">Where to Find Me</a>
+    </main>
 
-    let gravidadeAtivada = false;
-    let velocidade = 0;
-    let posicao = 0;
+    <button id="gravityBtn">Activate Gravity</button>
 
-    gravidadeBtn.addEventListener('click', () => {
-      if (gravidadeAtivada) return;
-      gravidadeAtivada = true;
+    <script>
+        const bioImage = document.getElementById('bioImage');
+        const gravityBtn = document.getElementById('gravityBtn');
 
-      const intervalo = setInterval(() => {
-        velocidade += 1;
-        posicao += velocidade;
-        img.style.transform = `translateY(${posicao}px)`;
+        let isGravityActive = false;
+        let velocityY = 0;
+        let positionY = 0;
+        const gravityAcceleration = 0.4; // Controls the pull of gravity
+        let animationFrameId;
 
-        if (posicao > window.innerHeight) {
-          clearInterval(intervalo);
+        function applyGravity() {
+            // Increase velocity due to gravity
+            velocityY += gravityAcceleration;
+            // Update position based on velocity
+            positionY += velocityY;
+
+            // Apply the new position
+            bioImage.style.transform = `translateY(${positionY}px)`;
+
+            // Stop the animation if the image is off-screen
+            if (positionY < window.innerHeight) {
+                animationFrameId = requestAnimationFrame(applyGravity);
+            } else {
+                isGravityActive = false; // Allow reactivation if needed
+            }
         }
-      }, 30);
-    });
-  </script>
+
+        gravityBtn.addEventListener('click', () => {
+            if (isGravityActive) return; // Prevent the animation from running multiple times
+            
+            isGravityActive = true;
+            // Reset position and velocity for re-runs
+            positionY = 0;
+            velocityY = 0;
+            
+            applyGravity();
+        });
+    </script>
 
 </body>
 </html>
